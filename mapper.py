@@ -156,6 +156,8 @@ class Mapper:
             move_cmd.linear.x = -1 * LIN_SPEED / 2.0
         elif self.state == 'forward':
             move_cmd.linear.x = LIN_SPEED
+            # choose a random turning direction
+            move_cmd.angular.z = random.randint(-1,1) * ROT_SPEED
         elif self.state == 'left':
             move_cmd.angular.z = ROT_SPEED
         elif self.state == 'right':

@@ -66,8 +66,8 @@ class MapDrawer:
             padded_img[h_start:h_start+h] = extra_img
             img = np.hstack((img, padded_img))
             
-        rotated = np.rot90(img, 1) # rotate image CCW
-        cv2.imshow('Map', rotated)
+        #rotated = np.rot90(img, 1) # rotate image CCW
+        cv2.imshow('Map', img)
         cv2.waitKey(5)
 
     def SaveMap(self, filename, position):

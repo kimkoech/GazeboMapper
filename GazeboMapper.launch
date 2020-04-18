@@ -2,7 +2,7 @@
 
    <!-- Launch playpen world -->
     <include file="$(find turtlebot_gazebo)/launch/start_world.launch">
-        <arg name="world_file" value="/home/user/gazebomapper/playpen.world"/>
+        <arg name="world_file" value="$(arg world)"/>
     </include>
 
     <!-- Launch localization package -->
